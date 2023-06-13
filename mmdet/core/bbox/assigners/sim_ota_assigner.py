@@ -13,7 +13,6 @@ from .base_assigner import BaseAssigner
 @BBOX_ASSIGNERS.register_module()
 class SimOTAAssigner(BaseAssigner):
     """Computes matching between predictions and ground truth.
-
     Args:
         center_radius (int | float, optional): Ground truth center size
             to judge whether a prior is in center. Default 2.5.

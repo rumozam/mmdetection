@@ -20,8 +20,9 @@ class YOLOXLrUpdaterHook(CosineAnnealingLrUpdaterHook):
            before the end of the training.
     """
 
-    def __init__(self, num_last_epochs, **kwargs):
+    def __init__(self, num_last_epochs, use_target_lr=False, **kwargs):
         self.num_last_epochs = num_last_epochs
+        self.use_target_lr = use_target_lr
         super(YOLOXLrUpdaterHook, self).__init__(**kwargs)
 
     def get_warmup_lr(self, cur_iters):
@@ -58,7 +59,7 @@ class YOLOXLrUpdaterHook(CosineAnnealingLrUpdaterHook):
         else:
             target_lr = self.min_lr
 
-        if progress >= max_progress - last_iter:
+        if progress >= max_progress - last_iter or self.use_target_lr:
             # fixed learning rate
             return target_lr
         else:

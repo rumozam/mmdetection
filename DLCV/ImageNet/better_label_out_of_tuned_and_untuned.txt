@@ -1,0 +1,272 @@
+tench (fish) 0.012
+rooster (male chicken) 0.024
+hen (female chicken) 0.011
+ostrich (ratite) 0.005
+brambling (bird) 0.006
+goldfinch (bird) 0.005
+house finch (bird) 0.000
+junco (bird) 0.006
+indigo bunting (bird) 0.001
+American robin (bird) 0.001
+bulbul (bird) 0.013
+jay (bird) 0.008
+magpie (bird) 0.003
+chickadee 0.001
+American dipper 0.000
+kite (bird of prey) 0.019
+bald eagle (bird of prey) 0.002
+vulture (bird of prey) 0.007
+great grey owl (bird of prey) 0.002
+axolotl (salamander) 0.006
+terrapin (turtle) 0.013
+banded gecko (lizard) 0.005
+green iguana (lizard) 0.000
+Carolina anole 0.001
+agama (lizard) 0.040
+Gila monster (lizard) 0.003
+triceratops (dinosaur) 0.002
+boa constrictor (snake) 0.004
+African rock python (snake) 0.005
+Indian cobra (snake) 0.002
+green mamba (snake) 0.009
+Saharan horned viper (snake) 0.002
+trilobite (extinct insect) 0.004
+harvestman (spider) 0.003
+southern black widow (spider) 0.003
+tarantula (spider) 0.005
+tick (mite) 0.012
+centipede (insect) 0.016
+black grouse (bird) 0.005
+ptarmigan 0.001
+ruffed grouse (bird) 0.002
+prairie grouse (bird) 0.001
+peafowl (bird) 0.002
+quail (bird) 0.004
+partridge (bird) 0.010
+macaw (parrot) 0.006
+sulphur-crested cockatoo 0.003
+lorikeet (parrot) 0.004
+coucal (cuckoo) 0.009
+bee eater (bird) 0.003
+hornbill (bird) 0.001
+jacamar (bird) 0.030
+toucan (bird) 0.006
+red-breasted merganser (duck) 0.000
+tusker (elephant) 0.014
+wallaby (kangaroo) 0.005
+nematode (worm) 0.007
+crayfish (lobster) 0.001
+white stork (bird) 0.002
+black stork (bird) 0.002
+spoonbill (bird) 0.005
+little blue heron (bird) 0.001
+great egret (bird) 0.003
+limpkin 0.000
+common gallinule 0.001
+American coot 0.005
+bustard (bird) 0.002
+ruddy turnstone (bird) 0.004
+dunlin (bird) 0.002
+common redshank 0.000
+dowitcher (bird) 0.001
+oystercatcher (bird) 0.000
+albatross (bird) 0.015
+dugong (sea cow) 0.012
+Chihuahua (dog) 0.003
+Japanese Chin (dog) 0.004
+Maltese (dog) 0.013
+Pekingese (dog) 0.002
+Shih Tzu (dog) 0.009
+King Charles Spaniel (dog) 0.001
+Papillon (dog) 0.035
+toy terrier (dog) 0.008
+Rhodesian Ridgeback (dog) 0.002
+Afghan Hound (dog) 0.005
+Basset Hound (dog) 0.004
+Beagle (dog) 0.009
+Bloodhound (dog) 0.008
+Bluetick Coonhound (dog) 0.002
+Black and Tan Coonhound (dog) 0.006
+Treeing Walker Coonhound (dog) 0.004
+English foxhound (dog) 0.016
+Redbone Coonhound (dog) 0.000
+borzoi 0.001
+Irish Wolfhound (dog) 0.003
+Italian Greyhound (dog) 0.002
+Whippet (dog) 0.002
+Ibizan Hound (dog) 0.003
+Norwegian Elkhound (dog) 0.003
+Otterhound (dog) 0.016
+Saluki (dog) 0.006
+Scottish Deerhound (dog) 0.003
+Weimaraner (dog) 0.002
+Staffordshire Bull Terrier 0.001
+American Staffordshire Terrier 0.001
+Bedlington Terrier 0.002
+Border Terrier (dog) 0.004
+Kerry Blue Terrier (dog) 0.002
+Irish Terrier (dog) 0.001
+Norfolk Terrier 0.000
+Norwich Terrier 0.000
+Yorkshire Terrier (dog) 0.001
+Wire Fox Terrier 0.000
+Lakeland Terrier 0.001
+Sealyham Terrier 0.003
+Airedale Terrier 0.004
+Cairn Terrier (dog) 0.001
+Australian Terrier (dog) 0.001
+Dandie Dinmont Terrier (dog) 0.004
+Boston Terrier (dog) 0.003
+Miniature Schnauzer (dog) 0.005
+Giant Schnauzer (dog) 0.004
+Standard Schnauzer (dog) 0.001
+Scottish Terrier (dog) 0.001
+Tibetan Terrier (dog) 0.000
+Australian Silky Terrier (dog) 0.000
+Soft-coated Wheaten Terrier 0.001
+West Highland White Terrier (dog) 0.004
+Lhasa Apso (dog) 0.006
+Flat-Coated Retriever (dog) 0.000
+Curly-coated Retriever (dog) 0.001
+Golden Retriever (dog) 0.005
+Labrador Retriever (dog) 0.003
+Chesapeake Bay Retriever 0.001
+German Shorthaired Pointer (dog) 0.001
+Vizsla (dog) 0.003
+English Setter (dog) 0.005
+Irish Setter (dog) 0.006
+Gordon Setter (dog) 0.000
+Clumber Spaniel 0.002
+English Springer Spaniel 0.001
+Welsh Springer Spaniel 0.002
+Cocker Spaniel (dog) 0.001
+Sussex Spaniel 0.000
+Irish Water Spaniel (dog) 0.002
+Kuvasz (dog) 0.007
+Schipperke (dog) 0.003
+Malinois (dog) 0.010
+Briard (dog) 0.005
+Australian Kelpie (dog) 0.004
+Komondor (dog) 0.003
+Old English Sheepdog (dog) 0.002
+Shetland Sheepdog 0.001
+collie (dog) 0.005
+Border Collie (dog) 0.005
+Rottweiler (dog) 0.003
+Dobermann (dog) 0.007
+Miniature Pinscher (dog) 0.000
+Appenzeller Sennenhund (dog) 0.005
+Entlebucher Sennenhund 0.000
+Boxer (dog) 0.022
+Bullmastiff (dog) 0.004
+Tibetan Mastiff (dog) 0.004
+French Bulldog (dog) 0.005
+Great Dane (dog) 0.006
+St. Bernard (dog) 0.012
+husky (dog) 0.013
+Alaskan Malamute (dog) 0.007
+Siberian Husky (dog) 0.008
+Dalmatian (dog) 0.013
+Affenpinscher (dog) 0.002
+Basenji (dog) 0.004
+pug (dog) 0.009
+Leonberger (dog) 0.001
+Samoyed (dog) 0.004
+Pomeranian (dog) 0.006
+Chow Chow (dog) 0.016
+Keeshond (dog) 0.002
+brussels griffon (dog) 0.006
+Pembroke Welsh Corgi 0.000
+Cardigan Welsh Corgi (dog) 0.003
+Toy Poodle (dog) 0.005
+Miniature Poodle (dog) 0.005
+Standard Poodle (dog) 0.003
+Mexican hairless dog (xoloitzcuintli) 0.009
+coyote (wolf) 0.010
+dingo (wild dog) 0.024
+dhole (wild dog) 0.010
+Egyptian Mau (cat) 0.001
+cougar (wildcat) 0.014
+lynx (wildcat) 0.014
+ladybug (beetle) 0.010
+weevil (beetle) 0.007
+lacewing (insect) 0.003
+wild boar (swine) 0.004
+warthog (swine) 0.010
+ox (male bovine) 0.012
+ram (adult male sheep) 0.034
+Alpine ibex (wild goat) 0.001
+hartebeest (antelope) 0.002
+impala (antelope) 0.028
+gazelle (antelope) 0.020
+orangutan (ape) 0.004
+gorilla 0.009
+chimpanzee (ape) 0.006
+gibbon 0.003
+siamang (ape) 0.003
+guenon (monkey) 0.008
+baboon (monkey) 0.012
+macaque (monkey) 0.002
+langur (monkey) 0.005
+black-and-white colobus (monkey) 0.001
+marmoset (monkey) 0.002
+white-headed capuchin 0.002
+indri (lemur) 0.034
+silver salmon 0.002
+sturgeon (fish) 0.005
+abaya (dress) 0.005
+academic gown (dress) 0.000
+aircraft carrier (ship) 0.001
+apiary (bee yard) 0.002
+bassinet (baby bed) 0.005
+station wagon (car) 0.006
+military hat (bearskin or shako) 0.032
+poke bonnet (hat) 0.004
+taxicab (car) 0.009
+cauldron (pot) 0.011
+catamaran 0.020
+chiffonier (furniture) 0.009
+china cabinet (furniture) 0.006
+cleaver (knife) 0.025
+clogs (footwear) 0.011
+coffee mug (cup) 0.004
+convertible (car) 0.007
+cradle (baby bed) 0.033
+desk 0.001
+filing cabinet (furniture) 0.013
+freight car (wheeled container) 0.003
+gown (dress) 0.004
+half-track (vehicle) 0.008
+hamper (basket) 0.022
+hatchet (ax) 0.012
+jeep (car) 0.003
+kimono (clothing) 0.013
+letter opener 0.001
+limousine (car) 0.010
+ocean liner (ship) 0.002
+medicine cabinet 0.001
+military uniform 0.001
+minivan (car) 0.004
+mitten (glove) 0.017
+ford model t (automobile) 0.007
+mosque (building) 0.004
+moving van (truck) 0.001
+pajamas (clothing) 0.003
+radiator (heater) 0.012
+sneaker (shoe) 0.004
+sandal (shoe) 0.002
+sarong (skirt) 0.005
+schooner (sailing ship) 0.011
+sombrero (hat) 0.001
+stupa (building) 0.001
+trimaran 0.019
+wok (pan) 0.008
+consomme (soup) 0.010
+cardoon (thistle) 0.013
+cherimoya (custard apple) 0.014
+eggnog (drink) 0.021
+daisy (flower) 0.025
+yellow lady's slipper (flower) 0.001
+agaric (mushroom) 0.004
+gyromitra (fungus) 0.001
+bolete (mushroom) 0.004

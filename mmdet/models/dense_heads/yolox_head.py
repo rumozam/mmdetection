@@ -20,7 +20,6 @@ from .dense_test_mixins import BBoxTestMixin
 @HEADS.register_module()
 class YOLOXHead(BaseDenseHead, BBoxTestMixin):
     """YOLOXHead head used in `YOLOX <https://arxiv.org/abs/2107.08430>`_.
-
     Args:
         num_classes (int): Number of categories excluding the background
             category.
@@ -196,7 +195,6 @@ class YOLOXHead(BaseDenseHead, BBoxTestMixin):
 
     def forward(self, feats):
         """Forward features from the upstream network.
-
         Args:
             feats (tuple[Tensor]): Features from the upstream network, each is
                 a 4D-tensor.

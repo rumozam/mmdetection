@@ -15,7 +15,10 @@ model = dict(
         out_channels=128,
         num_csp_blocks=1),
     bbox_head=dict(
-        type='YOLOXHead', num_classes=80, in_channels=128, feat_channels=128),
+        type='YOLOXHead',
+        num_classes=80,
+        in_channels=128,
+        feat_channels=128),
     train_cfg=dict(assigner=dict(type='SimOTAAssigner', center_radius=2.5)),
     # In order to align the source code, the threshold of the val phase is
     # 0.01, and the threshold of the test phase is 0.001.
@@ -26,16 +29,12 @@ data_root = 'data/coco/'
 dataset_type = 'CocoDataset'
 
 train_pipeline = [
-    dict(type='Mosaic', img_scale=img_scale, pad_val=114.0),
+    # no mosaic and mixup
     dict(
         type='RandomAffine',
-        scaling_ratio_range=(0.1, 2),
-        border=(-img_scale[0] // 2, -img_scale[1] // 2)),
-    dict(
-        type='MixUp',
-        img_scale=img_scale,
-        ratio_range=(0.8, 1.6),
-        pad_val=114.0),
+        scaling_ratio_range=(0.1, 2)),
+        # border=(-img_scale[0] // 2, -img_scale[1] // 2)),
+        # border is only used in mosaic datasets, otherwise this raises an exception
     dict(type='YOLOXHSVRandomAug'),
     dict(type='RandomFlip', flip_ratio=0.5),
     # According to the official implementation, multi-scale
@@ -57,8 +56,8 @@ train_dataset = dict(
     type='MultiImageMixDataset',
     dataset=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/instances_train2017.json',
-        img_prefix=data_root + 'train2017/',
+        ann_file=data_root + 'annotations/instances_train2014_seen_65_15.json',
+        img_prefix=data_root + 'train2014/',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(type='LoadAnnotations', with_bbox=True)
@@ -86,19 +85,19 @@ test_pipeline = [
 ]
 
 data = dict(
-    samples_per_gpu=8,
-    workers_per_gpu=4,
+    samples_per_gpu=24, # this samples and workers value only fits for the s-model
+    workers_per_gpu=8,
     persistent_workers=True,
     train=train_dataset,
     val=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/instances_val2017.json',
-        img_prefix=data_root + 'val2017/',
+        ann_file=data_root + 'annotations/instances_val2014_seen_65_15_new.json',
+        img_prefix=data_root + 'val2014/',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/instances_val2017.json',
-        img_prefix=data_root + 'val2017/',
+        ann_file=data_root + 'annotations/instances_val2014_seen_65_15_new.json',
+        img_prefix=data_root + 'val2014/',
         pipeline=test_pipeline))
 
 # optimizer
@@ -112,8 +111,11 @@ optimizer = dict(
     paramwise_cfg=dict(norm_decay_mult=0., bias_decay_mult=0.))
 optimizer_config = dict(grad_clip=None)
 
+# probably needed when training multi GPU 48-17 split
+# find_unused_parameters = True
+
 max_epochs = 300
-num_last_epochs = 15
+num_last_epochs = 0
 resume_from = None
 interval = 10
 
@@ -132,10 +134,11 @@ lr_config = dict(
 runner = dict(type='EpochBasedRunner', max_epochs=max_epochs)
 
 custom_hooks = [
-    dict(
-        type='YOLOXModeSwitchHook',
-        num_last_epochs=num_last_epochs,
-        priority=48),
+    # YOLOXModeSwitchHook turns off Mosaic and Mixup
+    #dict(
+    #    type='YOLOXModeSwitchHook',
+    #    num_last_epochs=num_last_epochs,
+    #    priority=48),
     dict(
         type='SyncNormHook',
         num_last_epochs=num_last_epochs,
@@ -149,12 +152,19 @@ custom_hooks = [
 ]
 checkpoint_config = dict(interval=interval)
 evaluation = dict(
-    save_best='auto',
     # The evaluation interval is 'interval' when running epoch is
     # less than ‘max_epochs - num_last_epochs’.
     # The evaluation interval is 1 when running epoch is greater than
     # or equal to ‘max_epochs - num_last_epochs’.
     interval=interval,
-    dynamic_intervals=[(max_epochs - num_last_epochs, 1)],
     metric='bbox')
-log_config = dict(interval=50)
+log_config = dict(
+    interval=50,
+    hooks=[ 
+        dict(type='TextLoggerHook'), 
+        # note the change in mmcv/mmcv/runner/log_buffer.py:
+        # we are using an averaging function that excludes all zero values from the average
+        # otherwise, the bbox and obj losses are distorted when training with imagenet
+        # this should not change anything for the solo COCO training
+        dict(type='TensorboardLoggerHook') 
+    ])

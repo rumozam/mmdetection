@@ -184,7 +184,10 @@ def main():
     if args.work_dir is not None and rank == 0:
         mmcv.mkdir_or_exist(osp.abspath(args.work_dir))
         timestamp = time.strftime('%Y%m%d_%H%M%S', time.localtime())
-        json_file = osp.join(args.work_dir, f'eval_{timestamp}.json')
+        #json_file = osp.join(args.work_dir, f'eval_{timestamp}.json')
+        checkpoint_path = args.checkpoint
+        epoch = checkpoint_path[checkpoint_path.find('epoch'):-4]
+        json_file = osp.join(args.work_dir, f'eval_{epoch}_{timestamp}.json')
 
     # build the dataloader
     dataset = build_dataset(cfg.data.test)
@@ -245,6 +248,7 @@ def main():
             metric_dict = dict(config=args.config, metric=metric)
             if args.work_dir is not None and rank == 0:
                 mmcv.dump(metric_dict, json_file)
+                print(f'saved {json_file} \n')
 
 
 if __name__ == '__main__':
